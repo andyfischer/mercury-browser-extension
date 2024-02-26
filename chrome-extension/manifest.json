@@ -1,0 +1,39 @@
+
+{
+  "name": "Mercury",
+  "description": "Mercury browser tool",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Mercury",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "dist/extension-background/backgroundMain.js"
+  },
+  "content_scripts": [{
+      "matches": [
+          "*://*/*"
+      ],
+      "js": [
+          "dist/extension-content/contentMain.js"
+      ]
+  }],
+  "web_accessible_resources": [{
+      "resources": [
+          "dist/extension-inject/main.js",
+          "dist/extension-background/chromeMain.js.map",
+          "dist/extension-content/chromeMain.js.map",
+          "dist/buildReport.json"
+      ],
+      "matches": [
+        "*://*/*" 
+      ]
+  }],
+  "permissions": [
+      "webRequest"
+  ],
+  "icons": {
+  }
+}
+  

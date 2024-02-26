@@ -1,0 +1,31 @@
+{
+    "name": "autoext",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "tsc -p .",
+        "tsc": "tsc",
+        "dev": "node --watch ./dist/cli/main.js",
+        "start": "node ./dist/cli/main.js",
+        "build-extension": "node ./dist/build/buildExtension.js"
+    },
+    "dependencies": {
+        "@vitejs/plugin-react-swc": "^3.4.0",
+        "adm-zip": "^0.5.10",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "swagger-ui-express": "^5.0.0",
+        "tailwindcss": "^3.3.5",
+        "typescript": "^5.2.2",
+        "vite": "^4.5.0",
+        "ws": "^8.14.2"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.246",
+        "@types/node": "^20.8.2",
+        "esbuild": "^0.19.4",
+        "sass": "^1.69.5",
+        "source-map-support": "^0.5.21"
+    }
+}

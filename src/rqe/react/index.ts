@@ -1,0 +1,2 @@
+
+export { useCachedData } from './useCachedData'
